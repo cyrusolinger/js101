@@ -5,17 +5,17 @@
 // Print the result to the terminal.
 
 const readline = require('readline-sync');
+const messages = require('./calculator_messages.json')
 
 function prompt(msg) {
   console.log(`=> ${msg}`);
 }
 
-// validate number entry
 function invalidNumber(num) {
   return num.trimStart() === "" || Number.isNaN(Number(num));
 }
 
-prompt('Welcome to Calculator!');
+prompt(messages.welcome);
 
 while (true) {
   prompt("What's the first number?");
