@@ -1,5 +1,9 @@
 const readline = require('readline-sync');
+<<<<<<< HEAD
 const VALID_CHOICES = ['rock', 'paper', 'scissors'];
+=======
+const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+>>>>>>> development
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -7,6 +11,7 @@ function prompt(message) {
 
 function displayWinner(choice, computerChoice) {
   prompt(`You chose ${choice}, computer chose ${computerChoice}`);
+<<<<<<< HEAD
 
   if ((choice === 'rock' && computerChoice === 'scissors') ||
       (choice === 'paper' && computerChoice === 'rock') ||
@@ -15,6 +20,31 @@ function displayWinner(choice, computerChoice) {
   } else if ((choice === 'rock' && computerChoice === 'paper') ||
              (choice === 'paper' && computerChoice === 'scissors') ||
              (choice === 'scissors' && computerChoice === 'rock')) {
+=======
+  if ((choice === 'rock' && computerChoice === 'lizard') ||
+      (choice === 'rock' && computerChoice === 'scissors') ||
+      (choice === 'lizard' && computerChoice === 'spock') ||
+      (choice === 'lizard' && computerChoice === 'paper') ||
+      (choice === 'spock' && computerChoice === 'scissors') ||
+      (choice === 'spock' && computerChoice === 'rock') ||
+      (choice === 'scissors' && computerChoice === 'lizard') ||
+      (choice === 'scissors' && computerChoice === 'paper') ||
+      (choice === 'paper' && computerChoice === 'spock') ||
+      (choice === 'paper' && computerChoice === 'rock')
+  ) {
+    prompt('You win!');
+  } else if ((choice === 'rock' && computerChoice === 'lizard') ||
+  (computerChoice === 'lizard' && choice === 'spock') ||
+  (computerChoice === 'rock' && choice === 'scissors') ||
+  (computerChoice === 'lizard' && choice === 'paper') ||
+  (computerChoice === 'spock' && choice === 'scissors') ||
+  (computerChoice === 'spock' && choice === 'rock') ||
+  (computerChoice === 'scissors' && choice === 'lizard') ||
+  (computerChoice === 'scissors' && choice === 'paper') ||
+  (computerChoice === 'paper' && choice === 'spock') ||
+  (computerChoice === 'paper' && choice === 'rock')
+) {
+>>>>>>> development
     prompt('Computer wins!');
   } else {
     prompt("It's a tie!");
